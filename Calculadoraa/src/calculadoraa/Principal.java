@@ -1,6 +1,6 @@
 package calculadoraa;
 
-import java.util.Scanner;
+import java.util.*;
 
 public class Principal {
 
@@ -9,8 +9,36 @@ public class Principal {
 
         Calculadora micalculadora; //Definir el objeto
         micalculadora = new Calculadora(); //Construir el objeto
+        float a;
+        float b;
         Scanner miEscaner;
         miEscaner = new Scanner(System.in);
+
+        System.out.println("ESTA ES UNA CALCULADORA QUE PERMITE HACER LAS OPERACIONES DE SUMA, RESTA, MULTIPLICACIÓN Y DIVISIÓN");
+        System.out.println("Ingrése 1. Para hacer una suma.");
+        System.out.println("Ingrése 2. Para hacer una resta.");
+        System.out.println("Ingrése 3. Para hacer una multiplicación.");
+        System.out.println("Ingrése 4. Para calcular un coseno.");
+        a = miEscaner.nextFloat();
+        while(a<1){
+            System.out.println("El dígito es invalido, intentelo de nuevo");
+            a = miEscaner.nextFloat();
+            while(a>4){
+            System.out.println("El dígito es invalido, intentelo de nuevo");
+            a = miEscaner.nextFloat();
+            }
+        }
+        while(a>4){
+            System.out.println("El dígito es invalido, intentelo de nuevo");
+            a = miEscaner.nextFloat();
+            while(a<1){
+            System.out.println("El dígito es invalido, intentelo de nuevo");
+            a = miEscaner.nextFloat();
+            }
+        }
+        System.out.println("Ingrese el primer número");
+        a = miEscaner.nextFloat();
+        System.out.println("Ingrese el segundo número");
+        b = miEscaner.nextFloat();
     }
-    
 }
