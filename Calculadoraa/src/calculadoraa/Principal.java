@@ -19,22 +19,10 @@ public class Principal {
         System.out.println("Ingrése 2. Para hacer una resta.");
         System.out.println("Ingrése 3. Para hacer una multiplicación.");
         System.out.println("Ingrése 4. Para calcular un coseno.");
+        try{
         a = miEscaner.nextFloat();
-        while(a<1){
-            System.out.println("El dígito es invalido, intentelo de nuevo");
-            a = miEscaner.nextFloat();
-            while(a>4){
-            System.out.println("El dígito es invalido, intentelo de nuevo");
-            a = miEscaner.nextFloat();
-            }
-        }
-        while(a>4){
-            System.out.println("El dígito es invalido, intentelo de nuevo");
-            a = miEscaner.nextFloat();
-            while(a<1){
-            System.out.println("El dígito es invalido, intentelo de nuevo");
-            a = miEscaner.nextFloat();
-            }
+        }catch(exception){
+        System.out.println("Número invalido, intentelo de nuevo");
         }
         System.out.println("Ingrese el primer número");
         a = miEscaner.nextFloat();
